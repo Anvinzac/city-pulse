@@ -16,7 +16,7 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <BrowserRouter>
-        <div className="max-w-[1180px] mx-auto relative px-3 md:px-5">
+        <div className="max-w-[1180px] mx-auto relative px-2 sm:px-3 md:px-5">
           <Routes>
             <Route path="/" element={<Timeline />} />
             <Route path="/my-works" element={<MyWorks />} />

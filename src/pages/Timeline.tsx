@@ -1015,7 +1015,7 @@ export default function Timeline() {
     : 'Latest timeframe';
 
   return (
-    <div className="min-h-screen pb-20">
+    <div className="min-h-screen pb-20 overflow-x-hidden">
       <AnimatePresence mode="wait">
         {completedWork && (
           <motion.div
@@ -1040,7 +1040,7 @@ export default function Timeline() {
         )}
       </AnimatePresence>
 
-      <header className="px-4 pt-6 pb-4 space-y-3">
+      <header className="px-2 sm:px-4 pt-6 pb-4 space-y-3">
         <p className="text-sm text-muted-foreground">{greeting}</p>
         <div className="rounded-2xl border border-primary/20 gradient-neon animate-gradient p-4 text-primary-foreground shadow-[0_12px_32px_rgba(21,112,239,0.24)]">
           <div className="flex items-center justify-between gap-3">
@@ -1072,7 +1072,7 @@ export default function Timeline() {
         </div>
       </header>
 
-      <div className="px-4 pb-4">
+      <div className="px-2 sm:px-4 pb-4">
         <div className="flex items-center justify-between mb-3">
           <p className="text-[11px] font-display font-semibold uppercase tracking-widest text-muted-foreground">{displayLabel}</p>
           <button
@@ -1086,12 +1086,14 @@ export default function Timeline() {
         </div>
 
         {showAllTimeframes ? (
-          <div className="flex gap-3 overflow-x-auto overscroll-x-contain snap-x snap-mandatory pb-2 no-scrollbar scroll-px-1">
-            {timelineByClock.map((timeframe, index) => (
-              <div key={`page-${timeframe.id}`} className="w-full shrink-0 snap-start snap-always">
-                {renderTimeframeSection(timeframe, 'all', index * 0.04)}
-              </div>
-            ))}
+          <div className="overflow-x-hidden">
+            <div className="flex gap-3 overflow-x-auto overscroll-x-contain snap-x snap-mandatory pb-2 no-scrollbar scroll-px-1 touch-pan-x">
+              {timelineByClock.map((timeframe, index) => (
+                <div key={`page-${timeframe.id}`} className="w-full shrink-0 snap-start snap-always">
+                  {renderTimeframeSection(timeframe, 'all', index * 0.04)}
+                </div>
+              ))}
+            </div>
           </div>
         ) : displayedTf ? (
           <AnimatePresence mode="wait">{renderTimeframeSection(displayedTf, 'single')}</AnimatePresence>

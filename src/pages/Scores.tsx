@@ -21,7 +21,7 @@ export default function Scores() {
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
   return (
-    <div className="min-h-screen pb-20 px-4">
+    <div className="min-h-screen pb-20 px-2 sm:px-4">
       <header className="pt-6 pb-4">
         <h1 className="text-2xl font-display font-bold text-foreground">Scores</h1>
         <p className="text-sm text-muted-foreground mt-1">Your performance overview</p>

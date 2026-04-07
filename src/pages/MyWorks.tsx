@@ -12,7 +12,7 @@ export default function MyWorks() {
   const done = allWorks.filter(w => w.status === 'done');
 
   return (
-    <div className="min-h-screen pb-20 px-4">
+    <div className="min-h-screen pb-20 px-2 sm:px-4">
       <header className="pt-6 pb-4">
         <h1 className="text-2xl font-display font-bold text-foreground">My Works</h1>
         <p className="text-sm text-muted-foreground mt-1">{allWorks.length} assigned today</p>
