@@ -6,61 +6,61 @@
 
 @layer base {
   :root {
-    --background: 222 60% 9%;
-    --foreground: 210 40% 96%;
+    --background: 214 43% 97%;
+    --foreground: 221 42% 19%;
 
-    --card: 225 30% 14%;
-    --card-foreground: 210 40% 96%;
+    --card: 0 0% 100%;
+    --card-foreground: 221 42% 19%;
 
-    --popover: 225 30% 14%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 42% 19%;
 
-    --primary: 349 100% 62%;
+    --primary: 213 86% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 187 100% 50%;
-    --secondary-foreground: 222 60% 9%;
+    --secondary: 172 80% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 225 20% 20%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 214 35% 92%;
+    --muted-foreground: 219 20% 45%;
 
-    --accent: 39 100% 50%;
-    --accent-foreground: 222 60% 9%;
+    --accent: 24 95% 54%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 225 20% 22%;
-    --input: 225 20% 22%;
-    --ring: 349 100% 62%;
+    --border: 215 28% 85%;
+    --input: 215 28% 85%;
+    --ring: 213 86% 50%;
     --radius: 0.75rem;
 
-    /* City Neon tokens */
-    --coral: 349 100% 62%;
-    --cyan: 187 100% 50%;
-    --amber: 39 100% 50%;
-    --navy: 222 60% 9%;
-    --graphite: 225 30% 14%;
-    --graphite-light: 225 25% 18%;
+    /* City Pulse tokens */
+    --coral: 12 88% 58%;
+    --cyan: 199 89% 48%;
+    --amber: 38 95% 53%;
+    --navy: 222 42% 19%;
+    --graphite: 213 30% 27%;
+    --graphite-light: 212 26% 35%;
 
-    --gradient-neon: linear-gradient(135deg, hsl(349 100% 62%), hsl(187 100% 50%));
-    --gradient-sunset: linear-gradient(135deg, hsl(349 100% 62%), hsl(39 100% 50%));
-    --gradient-dawn: linear-gradient(180deg, hsl(225 30% 14%), hsl(222 60% 9%));
+    --gradient-neon: linear-gradient(135deg, hsl(213 86% 50%), hsl(172 80% 40%));
+    --gradient-sunset: linear-gradient(135deg, hsl(213 86% 50%), hsl(24 95% 54%));
+    --gradient-dawn: linear-gradient(180deg, hsl(214 43% 97%), hsl(203 49% 93%));
 
-    --shadow-neon: 0 0 20px hsl(349 100% 62% / 0.3);
-    --shadow-cyan: 0 0 20px hsl(187 100% 50% / 0.3);
+    --shadow-neon: 0 14px 30px hsl(213 86% 50% / 0.22);
+    --shadow-cyan: 0 14px 28px hsl(172 80% 40% / 0.2);
 
     --font-display: 'Space Grotesk', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    --sidebar-background: 225 30% 14%;
-    --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 349 100% 62%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 221 42% 19%;
+    --sidebar-primary: 213 86% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 225 25% 18%;
-    --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 225 20% 22%;
-    --sidebar-ring: 349 100% 62%;
+    --sidebar-accent: 214 35% 92%;
+    --sidebar-accent-foreground: 221 42% 19%;
+    --sidebar-border: 215 28% 85%;
+    --sidebar-ring: 213 86% 50%;
   }
 }
 
@@ -70,6 +70,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 10% 15%, hsl(199 89% 48% / 0.14), transparent 32%),
+      radial-gradient(circle at 92% 4%, hsl(24 95% 54% / 0.15), transparent 30%);
+    min-height: 100vh;
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
